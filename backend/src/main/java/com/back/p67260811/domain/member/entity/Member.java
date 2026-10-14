@@ -3,8 +3,6 @@ package com.back.p67260811.domain.member.entity;
 import com.back.p67260811.global.jpa.entity.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,10 +10,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
 
 @NoArgsConstructor
-@Getter
 @Entity
 public class Member extends BaseEntity {
 
@@ -55,5 +51,21 @@ public class Member extends BaseEntity {
         }
 
         return authorities;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public String getApiKey() {
+        return apiKey;
     }
 }
