@@ -32,7 +32,6 @@ class SecurityConfig(
     private val customAuthenticationFilter: CustomAuthenticationFilter
 ) {
 
-
     @Bean
     @Throws(Exception::class)
     fun filterChain(http: HttpSecurity): SecurityFilterChain? {

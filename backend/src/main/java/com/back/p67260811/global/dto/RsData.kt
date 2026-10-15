@@ -20,4 +20,5 @@ class RsData<T>(
 
     fun getResultCode(): String = resultCode
     fun getMsg(): String = msg
+    fun getData(): T? = data
 }
