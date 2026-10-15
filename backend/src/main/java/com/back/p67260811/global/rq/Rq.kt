@@ -27,7 +27,7 @@ class Rq(
 //                SecurityContextHolder.getContext().getAuthentication()
 //            val user = authentication!!.getPrincipal() as SecurityUser?
             return SecurityContextHolder.getContext()
-                ?.authentication
+                .authentication
                 ?.principal
                 ?.let {
                     if (it is SecurityUser) {
@@ -41,7 +41,7 @@ class Rq(
         }
 
     fun setHeader(name: String, value: String) {
-        response!!.setHeader(name, value)
+        response.setHeader(name, value)
     }
 
 

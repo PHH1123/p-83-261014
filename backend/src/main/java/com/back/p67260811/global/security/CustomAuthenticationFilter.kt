@@ -89,7 +89,7 @@ class CustomAuthenticationFilter(
             ?.let { memberService.payloadOrNull(it) }
             ?.let { payload ->
                 val id = (payload["id"] as Number).toInt()
-                val username = payload["username"] as String?
+                val username = payload["username"] as String
                 val nickname = payload["nickname"] as String?
 
                 Member(id, username, nickname)

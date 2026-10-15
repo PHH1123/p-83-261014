@@ -11,14 +11,13 @@ import java.time.LocalDateTime
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener::class)
-abstract class BaseEntity(
-    @CreatedDate
-    var createDate: LocalDateTime,
-    @LastModifiedDate
-    var modifyDate: LocalDateTime
-) {
+abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int = 0
+    var id: Int? = 0
         protected set
+    @CreatedDate
+    lateinit var  createDate: LocalDateTime
+    @LastModifiedDate
+    lateinit var modifyDate: LocalDateTime
 }
